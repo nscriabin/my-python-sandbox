@@ -1,0 +1,19 @@
+[project]
+name = "my-python-sandbox"
+version = "0.1.0"
+description = "A sandbox for testing various Python things in your local environment.."
+readme = "README.md"
+
+requires-python = ">=3.14"
+dependencies = [
+    "ipykernel==7.4.0",
+    "pandas==3.1.1",
+]
+
+[tool.uv]
+# So that this project is not installed as a package and doesn't require an src/project dir/__init__.py
+package = false
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
